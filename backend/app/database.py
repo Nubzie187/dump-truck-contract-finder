@@ -5,7 +5,8 @@ from sqlalchemy.orm import sessionmaker
 import os
 
 # SQLite database path - using /data/app.db (mounted persistent volume)
-DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///data/app.db")
+DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:////data/app.db")
+
 
 # Ensure the /data directory exists
 db_path = DATABASE_URL.replace("sqlite:///", "")
